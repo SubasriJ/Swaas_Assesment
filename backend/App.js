@@ -21,6 +21,7 @@ app.use(
 );
 
 app.use(express.json());
+app.use('/api/registrations', registrationRoutes);
 app.use('/api/registrations', eventRegistrations);
 app.use('/api/registrations', registrationRoutes);
 app.use('/api/organizers', organizerRoutes);
@@ -28,6 +29,7 @@ app.use('/api/events', require('./Routes/list'));
 app.use('/api/events', require('./Routes/eventRoutes'));
 app.use('/api/auth', require('./Routes/login'));
 app.use('/api/auth', authRoutes);
+app.use('/api/events', require('./Routes/reviewRoutes.js'));
 
 
 const PORT = process.env.PORT || 3000;

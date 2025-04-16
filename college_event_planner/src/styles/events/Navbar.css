@@ -1,108 +1,148 @@
-/* src/styles/landingpage/Navbar.css */
+/* Navbar styling for responsive design */
 .navbar {
-    background-color: #D8BFD8; /* Light Violet (Thistle) */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+  background-color: #D8BFD8; /* Light Violet (Thistle) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-title {
+  font-size: 1.5rem; /* 24px */
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+}
+
+.navbar-toggle {
+  display: none; /* Hidden on larger screens */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #000000;
+  z-index: 1001; /* Ensure it's above the menu */
+}
+
+.navbar-menu-container {
+  display: flex;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navbar-menu li {
+  transition: background-color 0.2s;
+  border-radius: 4px;
+}
+
+.navbar-link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1rem; /* 16px */
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-icon {
+  font-size: 1.25rem; /* 20px */
+}
+
+.navbar-link-text {
+  display: inline; /* Always show text */
+}
+
+.navbar-menu li:hover,
+.navbar-menu li:focus-within {
+  background-color: #ffffff; /* White on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
-  
-  .navbar-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  .navbar-menu-container {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #D8BFD8;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
-  
-  .navbar-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000000; /* Black text */
-    margin: 0;
+
+  .navbar-menu-container.show {
+    display: block; /* Show when toggled */
   }
-  
+
   .navbar-menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 24px;
-    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
   }
-  
+
+  .navbar-link {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .navbar-menu li {
-    transition: background-color 0.2s, box-shadow 0.2s;
+    width: 100%;
   }
-  
-  .navbar-link,
-  .navbar-icon {
-    color: #000000; /* Black text/icons */
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px 12px;
-    display: flex;
-    align-items: center;
+
+  .navbar-menu li:hover,
+  .navbar-menu li:focus-within {
+    background-color: #E6C2D0; /* Light Pink on hover */
   }
-  
-  .navbar-icon {
-    font-size: 20px; /* Slightly larger for icons */
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.75rem;
   }
-  
-  .navbar-menu li:hover {
-    background-color: #ffffff; /* Light Pink for box highlight on hover */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+
+  .navbar-title {
+    font-size: 1.25rem; /* 20px */
+    max-width: 70%; /* Prevent overlap with toggle */
   }
-  
-  @media (max-width: 768px) {
-    .navbar-container {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
-    }
-  
-    .navbar-menu {
-      flex-direction: row;
-      gap: 16px;
-    }
-  
-    .navbar-title {
-      font-size: 20px;
-    }
-  
-    .navbar-link,
-    .navbar-icon {
-      font-size: 14px;
-    }
-  
-    .navbar-icon {
-      font-size: 18px;
-    }
-  
-    .navbar-menu li:hover {
-      background-color: #E6C2D0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-    }
+
+  .navbar-toggle {
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 1.25rem;
   }
-  
-  @media (max-width: 480px) {
-    .navbar {
-      padding: 12px;
-    }
-  
-    .navbar-title {
-      font-size: 18px;
-    }
-  
-    .navbar-menu {
-      gap: 12px;
-    }
-  
-    .navbar-link,
-    .navbar-icon {
-      padding: 6px 8px;
-    }
+
+  .navbar-link {
+    font-size: 0.875rem; /* 14px */
   }
+}

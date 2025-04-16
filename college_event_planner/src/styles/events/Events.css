@@ -1,32 +1,185 @@
 /* src/styles/events/Events.css */
 .events-page {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 20px;
-    background: linear-gradient(135deg, #FBF5E4 0%, #E6C2D0 100%); /* Gradient like landing page */
-    min-height: 100vh;
-    animation: gradientShift 10s ease infinite; /* Subtle animation */
-    color: #000000; /* Black text */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #FBF5E4 0%, #E6C2D0 100%);
+  min-height: 100vh;
+  animation: gradientShift 15s ease infinite;
+  color: #222222;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Add subtle pattern overlay */
+.events-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.03' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.events-page h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000000;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.events-page h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #E6C2D0, #FBF5E4);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Card styles for event items */
+.event-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #E6C2D0;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.event-card h2 {
+  color: #333;
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.event-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.event-date {
+  display: inline-block;
+  background: linear-gradient(135deg, #E6C2D0, #d990b7);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+/* Button styling */
+.btn-register {
+  background: linear-gradient(90deg, #E6C2D0, #d27ca8);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(210, 124, 168, 0.3);
+}
+
+.btn-register:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(210, 124, 168, 0.4);
+  background: linear-gradient(90deg, #d27ca8, #c55e8d);
+}
+
+/* Filter section */
+.events-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.filter-btn {
+  background-color: white;
+  border: 2px solid #E6C2D0;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background-color: #E6C2D0;
+  color: white;
+}
+
+/* Enhanced animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 50% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 50% 50%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .events-page {
+    padding: 20px 15px;
+    border-radius: 0;
   }
   
   .events-page h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000000; /* Black text */
+    font-size: 2rem;
+    margin-bottom: 30px;
   }
   
-  @keyframes gradientShift {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
+  .event-card {
+    padding: 20px 15px;
   }
   
-  @media (max-width: 768px) {
-    .events-page {
-      padding: 10px;
-    }
-  
-    .events-page h1 {
-      font-size: 24px;
-    }
+  .event-card h2 {
+    font-size: 1.5rem;
   }
+  
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+  .events-page h1 {
+    font-size: 1.8rem;
+  }
+  
+  .events-filter {
+    flex-direction: column;
+    align-items: center;
+  }
+}

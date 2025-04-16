@@ -239,8 +239,8 @@ const Events: React.FC = () => {
 
   return (
     <div className="events-page">
-      <h1>Campus Events</h1>
-      {email ? <p>Hi, {email}</p> : <p>Hi, Guest</p>}
+      <h1>&nbsp;&nbsp;&nbsp;Campus Events</h1>
+      {email ? <p> &nbsp;&nbsp;&nbsp;&nbsp;  Hi, {email}</p> : <p>Hi, Guest</p>}
       <CategoryFilter onFilterChange={handleFilterChange} />
       <SearchEvents onSearch={handleSearch} />
       {isLoading ? (

@@ -83,10 +83,9 @@
     background: #FBF5E4;
     border-radius: 8px;
     transition: transform 0.2s ease;
-  }
-  
-  .event-item:hover {
-    transform: scale(1.02);
+    /* Add this to ensure proper container behavior */
+    box-sizing: border-box;
+    width: 100%;
   }
   
   .event-item h3 {
@@ -99,6 +98,150 @@
     font-size: 1rem;
     color: #000000;
     margin: 0;
+  }
+  
+  /* Feedback Section - Only for Past Events */
+  .feedback-section {
+    margin-top: 1.5rem;
+    border-top: 1px dashed #C28E9A;
+    padding-top: 1rem;
+    /* Add this to ensure content stays contained */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Star Rating */
+  .star-rating {
+    margin-bottom: 1rem;
+  }
+  
+  .rating-label {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .star {
+    font-size: 1.8rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .star:hover {
+    color: #FFD700;
+  }
+  
+  .star.selected {
+    color: #FFD700;
+  }
+  
+  /* Comment Section */
+  .comment-section {
+    margin-bottom: 1rem;
+    /* Add this to ensure content stays contained */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .comment-input {
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+    padding: 0.8rem;
+    border: 1px solid #E6C2D0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    resize: vertical;
+    min-height: 80px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Critical for proper sizing */
+    display: block; /* Ensures proper block-level behavior */
+  }
+  
+  .comment-input:focus {
+    outline: none;
+    border-color: #C28E9A;
+    box-shadow: 0 0 5px rgba(194, 142, 154, 0.3);
+  }
+  
+  /* Submit Button */
+  .submit-feedback-btn {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #E6C2D0, #C28E9A);
+    color: #000000;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    box-sizing: border-box; /* Ensures proper sizing */
+  }
+  
+  .submit-feedback-btn:hover {
+    background: linear-gradient(135deg, #C28E9A, #A27073);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(194, 142, 154, 0.4);
+  }
+  
+  .submit-feedback-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Previous Feedback Display */
+  .previous-feedback {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box; /* Ensures proper sizing */
+    width: 100%;
+  }
+  
+  .previous-feedback h4 {
+    font-size: 1.1rem;
+    color: #000000;
+    margin: 0 0 0.5rem;
+  }
+  
+  .feedback-stars {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feedback-star {
+    font-size: 1.2rem;
+    color: #ddd;
+  }
+  
+  .feedback-star.filled {
+    color: #FFD700;
+  }
+  
+  .feedback-comment {
+    font-size: 0.9rem;
+    color: #000000;
+    font-style: italic;
+    background: #F9F9F9;
+    padding: 0.8rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    word-wrap: break-word; /* Ensures long words don't overflow */
+    overflow-wrap: break-word;
   }
   
   .no-events {
@@ -144,4 +287,33 @@
     0% { opacity: 1; }
     50% { opacity: 0.5; }
     100% { opacity: 1; }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .my-events-page {
+      margin: 1rem;
+      padding: 1rem;
+    }
+    
+    .page-title {
+      font-size: 2rem;
+    }
+    
+    .tab-button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+    }
+    
+    .event-item {
+      padding: 0.8rem;
+    }
+    
+    .stars {
+      gap: 0.3rem;
+    }
+    
+    .star {
+      font-size: 1.5rem;
+    }
   }
