@@ -1,0 +1,32 @@
+/* src/styles/events/Events.css */
+.events-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #FBF5E4 0%, #E6C2D0 100%); /* Gradient like landing page */
+    min-height: 100vh;
+    animation: gradientShift 10s ease infinite; /* Subtle animation */
+    color: #000000; /* Black text */
+  }
+  
+  .events-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000; /* Black text */
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+  
+  @media (max-width: 768px) {
+    .events-page {
+      padding: 10px;
+    }
+  
+    .events-page h1 {
+      font-size: 24px;
+    }
+  }

@@ -1,0 +1,57 @@
+/* src/styles/events/EventRegistration.css */
+.event-registration {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .register-button,
+  .cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .register-button {
+    background-color: #D8BFD8; /* Light Violet */
+    color: #000000; /* Black text */
+  }
+  
+  .cancel-button {
+    background-color: #ffffff; /* White */
+    border: 1px solid #D8BFD8; /* Light Violet border */
+    color: #000000; /* Black text */
+  }
+  
+  .register-button:hover {
+    background-color: #E6C2D0; /* Light Pink */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cancel-button:hover {
+    background-color: #E6C2D0; /* Light Pink */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .confirmation-message {
+    color: #000000; /* Black text */
+    background-color: #FBF5E4; /* Creamy Off-White */
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .event-registration {
+      margin: 10px;
+    }
+  
+    .register-button,
+    .cancel-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }

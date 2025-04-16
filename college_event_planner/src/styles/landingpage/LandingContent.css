@@ -1,0 +1,151 @@
+/* src/styles/landingpage/LandingContent.css */
+.landing-content {
+  flex: 1;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  color: #000000; /* Black text */
+  opacity: 0; /* Start hidden for animation */
+  animation: fadeIn 1s forwards 0.5s; /* Fade in after 0.5s */
+}
+
+.landing-content-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  opacity: 0;
+  animation: slideUpFade 0.8s forwards 0.7s; /* Slide up and fade in */
+}
+
+.landing-content-description,
+.landing-content-subtitle,
+.landing-content-closing {
+  font-size: 18px;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+  opacity: 0;
+}
+
+.landing-content-details {
+  margin-bottom: 24px;
+}
+
+.landing-content-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.landing-content-features li {
+  font-size: 16px;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+  opacity: 0;
+}
+
+.landing-content-features li::before {
+  content: "✔"; /* Checkmark for visual appeal */
+  position: absolute;
+  left: 0;
+  color: #C28E9A; /* Dusty Pink */
+}
+
+.landing-content-description { animation: fadeIn 0.8s forwards 1s; }
+.landing-content-subtitle { animation: fadeIn 0.8s forwards 1.2s; }
+.landing-content-closing { animation: fadeIn 0.8s forwards 1.4s; }
+.landing-content-features li { animation: fadeIn 0.6s forwards; }
+.landing-content-features li:nth-child(1) { animation-delay: 1.6s; }
+.landing-content-features li:nth-child(2) { animation-delay: 1.8s; }
+.landing-content-features li:nth-child(3) { animation-delay: 2.0s; }
+.landing-content-features li:nth-child(4) { animation-delay: 2.2s; }
+.landing-content-features li:nth-child(5) { animation-delay: 2.4s; }
+
+.landing-content-button {
+  background-color: #E6C2D0; /* Light Pink */
+  color: #000000; /* Black text */
+  padding: 12px 24px;
+  border: 2px solid #C28E9A; /* Dusty Pink border for glow effect */
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: fit-content;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  outline: none;
+}
+
+.landing-content-button:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 0 10px #C28E9A; /* Glow effect */
+  background-color: #C28E9A; /* Dusty Pink on hover */
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUpFade {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 1024px) {
+  .landing-content {
+    padding: 32px;
+  }
+
+  .landing-content-title {
+    font-size: 30px;
+  }
+
+  .landing-content-description,
+  .landing-content-subtitle,
+  .landing-content-closing {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-content {
+    padding: 24px;
+    max-width: none;
+    text-align: center;
+  }
+
+  .landing-content-title {
+    font-size: 26px;
+  }
+
+  .landing-content-features li {
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  .landing-content-button {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-content {
+    padding: 16px;
+  }
+
+  .landing-content-title {
+    font-size: 22px;
+  }
+
+  .landing-content-description,
+  .landing-content-subtitle,
+  .landing-content-closing {
+    font-size: 14px;
+  }
+
+  .landing-content-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

@@ -1,0 +1,135 @@
+.event-form-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Center the form horizontally */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
+  }
+  
+  .event-form-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 16px 0;
+    text-align: center;
+    color: #000000;
+  }
+  
+  .event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #C28E9A;
+    border-radius: 6px;
+    outline: none;
+    background-color: #FBF5E4;
+    color: #000000;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: #E6C2D0;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form-group .error {
+    color: #C28E9A;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  .create-event-button {
+    background-color: #E6C2D0;
+    color: #000000;
+    padding: 12px 24px;
+    border: 2px solid #C28E9A;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content;
+    align-self: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    outline: none;
+  }
+  
+  .create-event-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #C28E9A;
+    background-color: #C28E9A;
+  }
+  
+  @media (max-width: 768px) {
+    .event-form-section {
+      max-width: 100%;
+      padding: 24px;
+    }
+  
+    .event-form-section h3 {
+      font-size: 20px;
+    }
+  
+    .form-group label {
+      font-size: 14px;
+    }
+  
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .form-group .error {
+      font-size: 11px;
+    }
+  
+    .create-event-button {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .event-form-section {
+      padding: 20px;
+    }
+  
+    .event-form-section h3 {
+      font-size: 18px;
+    }
+  
+    .form-group .error {
+      font-size: 10px;
+    }
+  }

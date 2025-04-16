@@ -1,0 +1,68 @@
+.organizer-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FBF5E4 0%, #E6C2D0 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+.organizer-dashboard h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 32px 0;
+  text-align: center;
+  color: #000000;
+}
+
+.error-general {
+  color: #C28E9A;
+  font-size: 14px;
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 16px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@media (max-width: 768px) {
+  .organizer-dashboard {
+    padding: 24px;
+  }
+
+  .organizer-dashboard h1 {
+    font-size: 28px;
+  }
+
+  .error-general {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .organizer-dashboard {
+    padding: 16px;
+  }
+
+  .organizer-dashboard h1 {
+    font-size: 24px;
+  }
+
+  .error-general {
+    font-size: 10px;
+  }
+}

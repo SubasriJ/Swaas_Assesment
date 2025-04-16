@@ -1,0 +1,136 @@
+/* src/styles/events/EventList.css */
+.event-list {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px; /* Space between grid items */
+  padding: 16px;
+  background: linear-gradient(135deg, #FBF5E4 0%, #E6C2D0 100%); /* Gradient like landing page */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.no-results {
+  text-align: center;
+  font-size: 16px;
+  color: #000000; /* Black text */
+  padding: 20px;
+}
+
+.event-list-item {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.event-list-item:hover {
+  transform: translateY(-3px);
+}
+
+/* Share button styling positioned higher above register button */
+.event-item-share {
+  position: absolute;
+  bottom: 70px; /* Moved higher from 50px to 70px */
+  right: 10px; /* Align with right side where buttons usually are */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 5;
+}
+
+.event-item-share:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* For the share icon */
+.event-item-share svg {
+  color: #e6427d; /* Pink color matching your gradient */
+  font-size: 14px;
+}
+
+/* Style for share menu that appears */
+.event-share-menu {
+  position: absolute;
+  bottom: 105px; /* Also moved higher (70px + 35px) */
+  right: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  padding: 8px 0;
+  min-width: 150px;
+}
+
+.share-option {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.share-option:hover {
+  background-color: #f5f5f5;
+}
+
+.share-option svg {
+  color: #e6427d;
+}
+
+.no-events {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 16px;
+  color: #000000;
+  padding: 20px;
+}
+
+@media (max-width: 1200px) {
+  .event-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .event-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .event-list {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    margin: 10px;
+    padding: 12px;
+    gap: 15px;
+  }
+
+  .no-results {
+    font-size: 14px;
+  }
+  
+  /* Adjust share button position on mobile */
+  .event-item-share {
+    bottom: 80px; /* Moved higher on mobile as well */
+  }
+  
+  .event-share-menu {
+    bottom: 115px; /* Adjusted for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .event-list {
+    margin: 5px;
+    padding: 8px;
+  }
+}

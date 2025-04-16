@@ -1,0 +1,87 @@
+/* src/styles/landingpage/Navbar.css */
+.navbar {
+  background-color: #D8BFD8; /* Light Violet (Thistle) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000; /* Black text */
+  margin: 0;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 24px;
+}
+
+.navbar-menu li {
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.navbar-link {
+  color: #000000; /* Black text */
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px; /* Add padding for hover box effect */
+  display: block; /* Ensure the link fills the li */
+}
+
+.navbar-menu li:hover {
+  background-color: #ffffff; /* Light Pink for box highlight on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+  border-radius: 4px; /* Rounded corners for hover effect */
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .navbar-title {
+    font-size: 20px;
+  }
+
+  .navbar-link {
+    font-size: 14px;
+  }
+
+  .navbar-menu li:hover {
+    background-color: #E6C2D0; /* Consistent hover effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px;
+  }
+
+  .navbar-title {
+    font-size: 18px;
+  }
+}

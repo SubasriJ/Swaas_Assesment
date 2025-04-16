@@ -1,0 +1,32 @@
+/* src/styles/landingpage/LandingPage.css */
+.landing-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FBF5E4 0%, #E6C2D0 100%); /* Gradient from Creamy Off-White to Light Pink */
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite; /* Subtle gradient animation */
+  display: flex;
+  flex-direction: column;
+  color: #000000; /* Black text */
+  overflow: hidden; /* Prevent overflow from animations */
+}
+
+.landing-section {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@media (max-width: 768px) {
+  .landing-section {
+    flex-direction: column;
+    padding: 20px; /* Add padding for mobile */
+  }
+}

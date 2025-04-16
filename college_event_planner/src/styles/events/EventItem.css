@@ -1,0 +1,210 @@
+/* src/styles/events/EventItem.css */
+.event-item {
+  background-color: #ffffff; /* White */
+  border: 1px solid #D8BFD8; /* Light Violet border */
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px; /* Spacing for vertical arrangement */
+  position: relative; /* For popup positioning */
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Space between elements */
+}
+
+.event-item h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #000000; /* Black text */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #000000; /* Black text */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-icon {
+  font-size: 16px;
+  color: #D8BFD8; /* Light Violet */
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.info-icon:hover {
+  color: #E6C2D0; /* Light Pink on hover */
+}
+
+.register-button {
+  padding: 10px 20px;
+  background-color: #D8BFD8; /* Light Violet */
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #000000; /* Black text */
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  width: 100%; /* Full width for button */
+  margin-top: 12px; /* Space above button */
+}
+
+.register-button:hover {
+  background-color: #E6C2D0; /* Light Pink */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.popup-notification {
+  position: absolute;
+  top: 10px;
+  left: -100%; /* Start off-screen to the left */
+  background-color: #ffffff; /* White */
+  border: 1px solid #D8BFD8; /* Light Violet */
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000000; /* Black text */
+  animation: slideIn 0.5s forwards, fadeOut 0.5s forwards 2.5s; /* Slide in, fade out after 2.5s */
+  z-index: 10;
+  font-size: 16px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border: 1px solid #D8BFD8;
+  border-radius: 8px;
+  padding: 20px;
+  width: 500px;
+  height: 60vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #000000;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Adjust the space as needed */
+}
+
+
+.modal-content h2 {
+  margin: 0 0 15px 0;
+  font-size: 24px;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.map-section {
+  background-color: #FBF5E4; /* Creamy Off-White like image */
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.close-button {
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #000000;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close-button:hover {
+  color: #E6C2D0; /* Light Pink */
+}
+
+@keyframes slideIn {
+  to { left: 10px; } /* Slide in from left to 10px from left edge */
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; } /* Fade out after animation delay */
+}
+
+@media (max-width: 768px) {
+  .event-item {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
+  .event-item h3 {
+    font-size: 16px;
+  }
+
+  .event-item p {
+    font-size: 12px;
+  }
+
+  .info-icon {
+    font-size: 14px;
+  }
+
+  .register-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .popup-notification {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .modal-content {
+    width: 70%; /* Adjust for smaller screens */
+    padding: 15px;
+  }
+
+  .modal-content h2 {
+    font-size: 20px;
+  }
+
+  .map-section {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-item {
+    margin-bottom: 10px;
+  }
+
+  .popup-notification {
+    top: 5px;
+    padding: 6px 12px;
+  }
+
+  .modal-content {
+    width: 90%; /* Nearly full width on small screens */
+    padding: 10px;
+  }
+
+  .modal-content h2 {
+    font-size: 18px;
+  }
+
+  .map-section {
+    padding: 6px;
+  }
+}

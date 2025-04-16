@@ -1,0 +1,147 @@
+.my-events-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #FBF5E4 0%, #E6C2D0 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .greeting {
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tab-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000000;
+    background: #E6C2D0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-button:hover {
+    background: #C28E9A;
+    transform: translateY(-2px);
+  }
+  
+  .tab-button.active {
+    background: #C28E9A;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+  }
+  
+  .tab-content {
+    min-height: 200px;
+  }
+  
+  .event-section {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .event-section h2 {
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 1rem;
+  }
+  
+  .event-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .event-item {
+    padding: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    background: #FBF5E4;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .event-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .event-item h3 {
+    font-size: 1.4rem;
+    color: #000000;
+    margin: 0 0 0.5rem;
+  }
+  
+  .event-item p {
+    font-size: 1rem;
+    color: #000000;
+    margin: 0;
+  }
+  
+  .no-events {
+    font-size: 1.1rem;
+    color: #C28E9A;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .loading {
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: center;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .error-message {
+    font-size: 1.2rem;
+    color: #C28E9A;
+    text-align: center;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }

@@ -1,0 +1,88 @@
+/* src/styles/events/EventDetails.css */
+.event-details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .event-details {
+    background-color: #ffffff; /* White */
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Like navbar */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000000; /* Black */
+  }
+  
+  .close-button:hover {
+    color: #E6C2D0; /* Light Pink */
+  }
+  
+  .event-details h2 {
+    margin-top: 0;
+    color: #000000; /* Black text */
+  }
+  
+  .details-section {
+    margin-bottom: 16px;
+  }
+  
+  .details-section h3 {
+    margin: 0 0 8px;
+    color: #000000; /* Black text */
+  }
+  
+  .details-section p {
+    color: #000000; /* Black text */
+  }
+  
+  .map-placeholder {
+    height: 200px;
+    background-color: #FBF5E4; /* Creamy Off-White */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #D8BFD8; /* Light Violet */
+    color: #000000; /* Black text */
+  }
+  
+  @media (max-width: 768px) {
+    .event-details {
+      padding: 16px;
+      width: 95%;
+    }
+  
+    .event-details h2 {
+      font-size: 20px;
+    }
+  
+    .details-section h3 {
+      font-size: 16px;
+    }
+  
+    .map-placeholder {
+      height: 150px;
+    }
+  }

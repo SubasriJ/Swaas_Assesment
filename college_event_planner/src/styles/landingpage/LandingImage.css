@@ -1,0 +1,45 @@
+/* src/styles/landingpage/LandingImage.css */
+.landing-image {
+  flex: 1;
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.landing-image-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #E6C2D0; /* Light Pink as a subtle background */
+  transition: transform 0.3s ease; /* Smooth transition for zoom */
+}
+
+.landing-image-img:hover {
+  transform: scale(1.05); /* Zoom in 5% on hover */
+}
+
+@media (max-width: 1024px) {
+  .landing-image {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-image {
+    padding: 24px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-image {
+    padding: 16px;
+  }
+
+  .landing-image-img {
+    max-width: 80%;
+  }
+}
